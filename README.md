@@ -64,7 +64,11 @@ pytest                          # tests
 
 ## Données
 
-Fichier `projet5.csv`, renommé `travel_insurance_raw.csv`. Il ressemble au jeu de données public « Travel Insurance » diffusé sur Kaggle ; **vérifiez sa licence et sa source avant de publier** le dépôt et ajoutez l'attribution correspondante ici.
+## Données
+
+Projet réalisé dans le cadre du cours Machine Learning, faculté des sciences de Bizerte, 2026.
+Le jeu de données travel_insurance_raw.csv a été fourni par l'enseignante. Il est inclus ici à des fins pédagogiques uniquement.
+L'analyse, le code et la rédaction sont mon travail personnel.
 
 ## Licence
 

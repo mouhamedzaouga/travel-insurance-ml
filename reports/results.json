@@ -1,0 +1,355 @@
+{
+  "cleaning": {
+    "n_raw": 21300,
+    "n_empty_rows": 1,
+    "n_duplicates": 1896,
+    "n_invalid_duration": 20,
+    "n_invalid_age": 255,
+    "gender_missing_pct": 78.6,
+    "n_clean": 19383,
+    "age_missing_after": 255
+  },
+  "eda": {
+    "target": {
+      "n": 19383,
+      "claims": 194,
+      "rate_pct": 1.0
+    },
+    "chi2": {
+      "Agency_Type": {
+        "chi2": 104.09,
+        "dof": 1,
+        "p_value": 1.935052591044838e-24,
+        "min_expected": 42.85
+      },
+      "Distribution_Channel": {
+        "chi2": 0.0,
+        "dof": 1,
+        "p_value": 1.0,
+        "min_expected": 1.57
+      },
+      "Agency": {
+        "chi2": 511.98,
+        "dof": 12,
+        "p_value": 6.2333778015284325e-102,
+        "min_expected": 0.31
+      },
+      "Product_Name": {
+        "chi2": 1003.2,
+        "dof": 14,
+        "p_value": 3.2160195586500625e-205,
+        "min_expected": 0.41
+      },
+      "Gender_known": {
+        "chi2": 107.69,
+        "dof": 1,
+        "p_value": 3.1368832176605837e-25,
+        "min_expected": 41.52
+      }
+    },
+    "mannwhitney": {
+      "Duration": {
+        "median_claim": 55.5,
+        "median_no_claim": 25.0,
+        "p_value": 2.462511194003816e-19
+      },
+      "Net_Sales": {
+        "median_claim": 69.3,
+        "median_no_claim": 26.0,
+        "p_value": 1.139206152849579e-38
+      },
+      "Commission": {
+        "median_claim": 15.375,
+        "median_no_claim": 0.0,
+        "p_value": 1.2313207932855934e-28
+      },
+      "Age": {
+        "median_claim": 36.0,
+        "median_no_claim": 36.0,
+        "p_value": 0.14791859051588047
+      }
+    },
+    "corr": {
+      "Duration": {
+        "Duration": 1.0,
+        "Net_Sales": 0.23,
+        "Commission": 0.05,
+        "Age": -0.05
+      },
+      "Net_Sales": {
+        "Duration": 0.23,
+        "Net_Sales": 1.0,
+        "Commission": 0.24,
+        "Age": 0.02
+      },
+      "Commission": {
+        "Duration": 0.05,
+        "Net_Sales": 0.24,
+        "Commission": 1.0,
+        "Age": 0.18
+      },
+      "Age": {
+        "Duration": -0.05,
+        "Net_Sales": 0.02,
+        "Commission": 0.18,
+        "Age": 1.0
+      }
+    },
+    "rate_by": {
+      "Agency_Type": [
+        {
+          "Agency_Type": "Airlines",
+          "n": 4281,
+          "claims": 102,
+          "rate": 2.38
+        },
+        {
+          "Agency_Type": "Travel Agency",
+          "n": 15102,
+          "claims": 92,
+          "rate": 0.61
+        }
+      ],
+      "Agency": [
+        {
+          "Agency": "C2B",
+          "n": 1231,
+          "claims": 88,
+          "rate": 7.15
+        },
+        {
+          "Agency": "CBH",
+          "n": 32,
+          "claims": 1,
+          "rate": 3.12
+        },
+        {
+          "Agency": "CWT",
+          "n": 2869,
+          "claims": 29,
+          "rate": 1.01
+        },
+        {
+          "Agency": "SSI",
+          "n": 310,
+          "claims": 3,
+          "rate": 0.97
+        },
+        {
+          "Agency": "KML",
+          "n": 124,
+          "claims": 1,
+          "rate": 0.81
+        },
+        {
+          "Agency": "JWT",
+          "n": 181,
+          "claims": 1,
+          "rate": 0.55
+        },
+        {
+          "Agency": "EPX",
+          "n": 11940,
+          "claims": 61,
+          "rate": 0.51
+        },
+        {
+          "Agency": "JZI",
+          "n": 2209,
+          "claims": 10,
+          "rate": 0.45
+        }
+      ],
+      "Product_Name": [
+        {
+          "Product_Name": "Annual Silver Plan",
+          "n": 268,
+          "claims": 50,
+          "rate": 18.66
+        },
+        {
+          "Product_Name": "Annual Gold Plan",
+          "n": 41,
+          "claims": 3,
+          "rate": 7.32
+        },
+        {
+          "Product_Name": "Gold Plan",
+          "n": 62,
+          "claims": 3,
+          "rate": 4.84
+        },
+        {
+          "Product_Name": "Silver Plan",
+          "n": 299,
+          "claims": 12,
+          "rate": 4.01
+        },
+        {
+          "Product_Name": "Bronze Plan",
+          "n": 561,
+          "claims": 20,
+          "rate": 3.57
+        },
+        {
+          "Product_Name": "2 way Comprehensive Plan",
+          "n": 4538,
+          "claims": 52,
+          "rate": 1.15
+        },
+        {
+          "Product_Name": "Rental Vehicle Excess Insurance",
+          "n": 2869,
+          "claims": 29,
+          "rate": 1.01
+        },
+        {
+          "Product_Name": "Ticket Protector",
+          "n": 310,
+          "claims": 3,
+          "rate": 0.97
+        }
+      ],
+      "Gender_known": [
+        {
+          "Gender_known": "Known",
+          "n": 4148,
+          "claims": 101,
+          "rate": 2.43
+        },
+        {
+          "Gender_known": "Unknown",
+          "n": 15235,
+          "claims": 93,
+          "rate": 0.61
+        }
+      ]
+    },
+    "top_agency_share_pct": 61.6,
+    "top_agency": "EPX",
+    "age_default_36_pct": 42.6
+  },
+  "clustering": {
+    "k_candidates": {
+      "k": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "silhouette": [
+        0.58,
+        0.426,
+        0.451,
+        0.455,
+        0.446,
+        0.44,
+        0.398
+      ]
+    },
+    "k_best_silhouette": 2,
+    "k_used": 4,
+    "silhouette_kmeans": 0.451,
+    "silhouette_cah": 0.442,
+    "ari_kmeans_vs_cah": 0.919,
+    "profiles": [
+      {
+        "Cluster": 0,
+        "n": 13445,
+        "duration_med": 25.0,
+        "net_sales_med": 24.0,
+        "commission_med": 0.0,
+        "age_med": 36.0,
+        "airline_pct": 0.0,
+        "claims": 74,
+        "claim_rate_pct": 0.55
+      },
+      {
+        "Cluster": 1,
+        "n": 3858,
+        "duration_med": 17.0,
+        "net_sales_med": 25.32,
+        "commission_med": 7.7,
+        "age_med": 43.0,
+        "airline_pct": 100.0,
+        "claims": 44,
+        "claim_rate_pct": 1.14
+      },
+      {
+        "Cluster": 2,
+        "n": 1745,
+        "duration_med": 38.0,
+        "net_sales_med": 69.3,
+        "commission_med": 41.58,
+        "age_med": 43.0,
+        "airline_pct": 6.02,
+        "claims": 22,
+        "claim_rate_pct": 1.26
+      },
+      {
+        "Cluster": 3,
+        "n": 335,
+        "duration_med": 367.0,
+        "net_sales_med": 252.85,
+        "commission_med": 63.21,
+        "age_med": 40.0,
+        "airline_pct": 94.93,
+        "claims": 54,
+        "claim_rate_pct": 16.12
+      }
+    ]
+  },
+  "modeling": {
+    "cv": {
+      "Baseline (prior)": {
+        "roc_auc": "0.500 ± 0.000",
+        "pr_auc": "0.010 ± 0.000",
+        "_roc": 0.5,
+        "_pr": 0.010008762746508809
+      },
+      "Régression logistique": {
+        "roc_auc": "0.810 ± 0.055",
+        "pr_auc": "0.105 ± 0.058",
+        "_roc": 0.8102044983752223,
+        "_pr": 0.10475175195899064
+      },
+      "Random Forest": {
+        "roc_auc": "0.817 ± 0.062",
+        "pr_auc": "0.094 ± 0.046",
+        "_roc": 0.8171636358735723,
+        "_pr": 0.0935685904901922
+      },
+      "Gradient Boosting": {
+        "roc_auc": "0.816 ± 0.055",
+        "pr_auc": "0.101 ± 0.051",
+        "_roc": 0.8160171781781591,
+        "_pr": 0.10131886486604214
+      }
+    },
+    "baseline_pr_auc": 0.01,
+    "best_model": "Régression logistique",
+    "holdout": {
+      "n_test": 4846,
+      "claims_test": 49,
+      "roc_auc": 0.794,
+      "pr_auc": 0.105,
+      "recall_in_top10pct": 0.531,
+      "recall_in_top20pct": 0.694
+    },
+    "importance": {
+      "Agency": 0.087,
+      "Net_Sales": 0.0756,
+      "Product_Name": 0.0342,
+      "Commission": 0.0204,
+      "Agency_Type": 0.0142,
+      "Gender": 0.0136,
+      "Destination": 0.0136,
+      "Age": 0.0097,
+      "Duration": 0.0077,
+      "Distribution_Channel": -0.0071
+    }
+  }
+}
